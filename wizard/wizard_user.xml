@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="uset_wizard_form">
+      <field name="name">User Wizard</field>
+      <field name="model">users.wizard</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="last_name"/>
+              </group>
+              <group>
+                <field name="email"/>
+                <field name="primary_client"/>
+                <field name="user_type"/>
+              </group>
+              <group>
+                <field name="user_setting"/>
+              </group>
+            </group>
+            <footer>
+            <button name="create_user" 
+              string="Create"
+              type="object" class="btn-primary"/>
+          </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="user_wizard_action_window">
+      <field name="name">User Wizard Action Window</field>
+      <field name="res_model">users.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+    </record>
+    
+
+    
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="user_template" id="user_template.menu_root"/>
+    -->
+    <!-- menu categories -->
+    
+    <menuitem name="Create User Wizard" id="user_wizard_menu" parent="base.menu_action_res_users" action="user_template.user_wizard_action_window"/>
+    
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="user_template.menu_1_list" parent="user_template.menu_1"
+              action="user_template.action_window"/>
+    <menuitem name="Server to list" id="user_template" parent="user_template.menu_2"
+              action="user_template.action_server"/>
+    -->
+  </data>
+</odoo>

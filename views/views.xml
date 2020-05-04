@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="view_groups_form_inherit">
+      <field name="name">user_template list</field>
+      <field name="model">res.groups</field>
+      <field name="inherit_id" ref="base.view_groups_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='is_portal']" position="after">
+          <field name="quick_user"/>
+        </xpath>
+      </field>
+    </record>
+    
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="user_template.action_window">
+      <field name="name">user_template window</field>
+      <field name="res_model">user_template.user_template</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="user_template.action_server">
+      <field name="name">user_template server</field>
+      <field name="model_id" ref="model_user_template_user_template"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="user_template" id="user_template.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="user_template.menu_1" parent="user_template.menu_root"/>
+    <menuitem name="Menu 2" id="user_template.menu_2" parent="user_template.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="user_template.menu_1_list" parent="user_template.menu_1"
+              action="user_template.action_window"/>
+    <menuitem name="Server to list" id="user_template" parent="user_template.menu_2"
+              action="user_template.action_server"/>
+    -->
+  </data>
+</odoo>

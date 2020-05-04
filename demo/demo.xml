@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+          <record id="demo_admin_user" model="res.groups">
+            <field name="name">Admin User</field>
+            <field name="quick_user">True</field>
+          </record>
+
+          <record id="demo_categ_user" model="res.groups">
+            <field name="name">Categorise User</field>
+          </record>
+
+          <record id="demo_action_creator" model="res.groups">
+            <field name="name">Action Creator</field>
+          </record>
+
+          <record id="demo_content_supervisor" model="res.groups">
+            <field name="name">Content Supervisor</field>
+          </record>
+
+          <record id="demo_content_creator" model="res.groups">
+            <field name="name">Content Creator (External)</field>
+          </record>
+
+          <record id="demo_content_creator_internal" model="res.groups">
+            <field name="name">Content Creator (Internal)</field>
+          </record>
+
+          <record id="demo_end_user" model="res.groups">
+            <field name="name">End User</field>
+          </record>
+
+          <record id="demo_action_user" model="res.groups">
+            <field name="name">Action User</field>
+          </record>
+        
+    </data>
+</odoo>
