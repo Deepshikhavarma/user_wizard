@@ -3,10 +3,10 @@
     'name': "User Wizard",
 
     'summary': """
-        Wizard to create user""",
+        Wizard to create user in odoo 11""",
 
     'description': """
-        Wizard to create user with company and access groups details
+        Wizard to create user in odoo 11 with company and access groups details
     """,
 
     
